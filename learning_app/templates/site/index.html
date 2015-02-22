@@ -1,5 +1,11 @@
 {% extends "site/base.html" %}
 
+{% block title %}
+    Learming HTML
+{% endblock %}
+
 {% block body %}
-    <b> Hello world!!! </b>
+    <div ng-controller="LearningController">
+        <b> Hello {[{ username }]} !!! </b>
+    </div>
 {% endblock %}
