@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'learning_app',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -77,7 +78,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+SITE_URL = 'http://127.0.0.1:8000/'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
@@ -88,3 +89,9 @@ STATIC_ROOT = BASE_DIR + '/learning_app/static/'
 TEMPLATE_DIRS = (
     BASE_DIR + '/learning_app/templates',
 )
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    'PAGINATE_BY': 10
+}

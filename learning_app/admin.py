@@ -1,3 +1,6 @@
 from django.contrib import admin
+from learning_app import models
 
-# Register your models here.
+
+admin.site.register(models.Link)
+admin.site.register(models.Hit)

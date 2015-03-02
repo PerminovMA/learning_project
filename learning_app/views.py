@@ -7,4 +7,4 @@ def index(request):
     return render(request, 'site/index.html', context)
 
 def get_data(request):
-    return HttpResponse("Get data")
+    return HttpResponse('{"mihail": "krutoi", "andrey": "loh"}', content_type="text/plain")

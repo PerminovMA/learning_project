@@ -1,4 +1,4 @@
-var app = angular.module('learning_app', []);
+var app = angular.module('learning_app', ['connector']);
 
 app.config(function ($interpolateProvider) {
     //allow django templates and angular to co-exist
@@ -9,4 +9,8 @@ app.config(function ($interpolateProvider) {
 
 app.controller('LearningController', function ($scope) {
     $scope.username = "Mihail";
+});
+
+app.controller('ConnectorController', function ($scope, Project) {
+    $scope.response_text = Project.get();
 });
